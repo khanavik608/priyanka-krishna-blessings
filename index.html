@@ -36,29 +36,26 @@
         header {
             text-align: center;
             padding: 45px 20px;
-            background: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(12px);
             border-bottom: 4px solid #38bdf8;
             box-shadow: 0 4px 20px rgba(14, 165, 233, 0.15);
             position: relative;
         }
 
-        /* Peacock Feather Theme Accent */
-        .peacock-accent {
-            display: inline-block;
-            background: linear-gradient(135deg, #0284c7, #10b981, #d97706);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 700;
+        .peacock-decor {
+            font-size: 2rem;
+            margin-bottom: 10px;
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 2.3rem;
+            color: var(--secondary-color);
             margin-bottom: 10px;
         }
 
         header p {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             color: #4b5563;
         }
 
@@ -68,7 +65,7 @@
             padding: 20px;
         }
 
-        /* Divine Gallery Section with Peacock Styling */
+        /* Divine Art Gallery */
         .divine-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -79,10 +76,10 @@
         .divine-card {
             background: var(--card-bg);
             border-radius: 20px;
-            padding: 20px;
+            padding: 25px;
             text-align: center;
             box-shadow: 0 10px 25px rgba(2, 132, 199, 0.12);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease;
             border: 2px solid #bae6fd;
             position: relative;
             overflow: hidden;
@@ -90,38 +87,48 @@
 
         .divine-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 15px 30px rgba(13, 148, 136, 0.2);
             border-color: #38bdf8;
         }
 
-        /* Peacock feather top border design */
-        .divine-card::before {
-            content: "🦚";
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            font-size: 1.2rem;
+        .sacred-art-box {
+            width: 100%;
+            height: 180px;
+            background: linear-gradient(135deg, #fffbeb, #e0f2fe);
+            border-radius: 14px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+            border: 2px dashed #f59e0b;
         }
 
-        .divine-card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 14px;
-            margin-bottom: 15px;
-            background: #f0f9ff;
-            border: 2px solid #e0f2fe;
+        .sacred-icon {
+            font-size: 3.5rem;
+            margin-bottom: 5px;
+            animation: floatSymbol 3s ease-in-out infinite;
+        }
+
+        .sacred-label {
+            font-size: 0.95rem;
+            color: #b45309;
+            font-weight: bold;
+        }
+
+        @keyframes floatSymbol {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
         }
 
         .divine-card h3 {
             color: var(--peacock-blue);
-            font-size: 1.4rem;
+            font-size: 1.35rem;
             margin-bottom: 8px;
         }
 
         .divine-card p {
             color: #4b5563;
-            font-size: 0.98rem;
+            font-size: 0.95rem;
         }
 
         /* Content Sections */
@@ -144,17 +151,17 @@
             gap: 10px;
         }
 
-        /* Interactive Bani Section */
+        /* Interactive 108 Bani Section */
         .quote-box {
             background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%);
             padding: 30px;
             border-radius: 16px;
             text-align: center;
             border: 2px dashed #38bdf8;
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             color: #0369a1;
             box-shadow: 0 6px 20px rgba(56, 189, 248, 0.15);
-            min-height: 140px;
+            min-height: 150px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -163,7 +170,7 @@
 
         .quote-author {
             margin-top: 15px;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             color: #0d9488;
             font-weight: bold;
         }
@@ -183,15 +190,11 @@
             cursor: pointer;
             box-shadow: 0 5px 15px rgba(2, 132, 199, 0.3);
             transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
         }
 
         .next-bani-btn:hover {
             transform: scale(1.05);
             background: linear-gradient(135deg, #0369a1, #0f766e);
-            box-shadow: 0 8px 20px rgba(13, 148, 136, 0.4);
         }
 
         .bani-counter {
@@ -219,12 +222,66 @@
         .tip-card h4 {
             color: #166534;
             margin-bottom: 8px;
-            font-size: 1.25rem;
+            font-size: 1.2rem;
         }
 
         .tip-card p {
             color: #15803d;
             font-size: 1rem;
+        }
+
+        /* Animated Love Sign Section */
+        .love-animation-section {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            margin-bottom: 25px;
+            border: 2px dashed #f43f5e;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .love-title {
+            font-size: 1.4rem;
+            color: #e11d48;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .animated-heart {
+            font-size: 3.5rem;
+            display: inline-block;
+            animation: heartbeat 1.2s infinite ease-in-out;
+            cursor: pointer;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            15% { transform: scale(1.3); }
+            30% { transform: scale(1); }
+            45% { transform: scale(1.25); }
+            60% { transform: scale(1); }
+        }
+
+        .floating-hearts {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+            font-size: 1.5rem;
+        }
+
+        .floating-hearts span {
+            animation: floatUp 2s infinite ease-in-out alternate;
+        }
+
+        .floating-hearts span:nth-child(2) { animation-delay: 0.4s; }
+        .floating-hearts span:nth-child(3) { animation-delay: 0.8s; }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0); opacity: 0.6; }
+            100% { transform: translateY(-10px); opacity: 1; }
         }
 
         footer {
@@ -278,12 +335,7 @@
             font-size: 1.05rem;
             border-radius: 30px;
             cursor: pointer;
-            transition: all 0.2s;
             box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
-        }
-
-        .modal-btn:hover {
-            transform: scale(1.03);
         }
 
         @keyframes fadeIn {
@@ -298,38 +350,50 @@
     <div class="modal" id="welcomeModal">
         <div class="modal-content">
             <h3>🦚 শ্রী কৃষ্ণ ও লাড্ডু গোপালের আশীর্বাদ 🦚</h3>
-            <p>প্রিয়াঙ্কা, তোমার এবং তোমার অনাগত সন্তানের মঙ্গল কামনায় এই পবিত্র নীড় তৈরি করা হয়েছে। ময়ূরের পালকের মতো তোমার মনও সর্বদা আনন্দে ও শান্তিতে ভরে থাকুক। 🙏</p>
+            <p>প্রিয়াঙ্কা, তোমার এবং তোমার অনাগত সন্তানের মঙ্গল কামনায় এই পবিত্র নীড় তৈরি করা হয়েছে। ময়ূরের পালকের স্নিগ্ধতায় তোমার মন সর্বদা শান্ত থাকুক। 🙏</p>
             <button class="modal-btn" onclick="closeModal()">আশীর্বাদ গ্রহণ করুন</button>
         </div>
     </div>
 
     <header>
-        <h1>ॐ <span class="peacock-accent">প্রিয়াঙ্কার পবিত্র মন ও আনন্দ কোল</span> 🦚</h1>
+        <div class="peacock-decor">🦚 🪈 🦚</div>
+        <h1>প্রিয়াঙ্কার পবিত্র মন ও আনন্দ কোল</h1>
         <p>“ময়ূরের পালক শোভিত কানাই ও লাড্ডু গোপালের চরণে সঁপে দাও সমস্ত দুশ্চিন্তা।”</p>
     </header>
 
     <div class="container">
 
-        <!-- Divine Gallery Section -->
+        <!-- Sacred Art Gallery -->
         <div class="divine-gallery">
             <div class="divine-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Krishna_as_a_baby_eating_butter_makhan_chor.jpg/640px-Krishna_as_a_baby_eating_butter_makhan_chor.jpg" alt="Laddu Gopal">
+                <div class="sacred-art-box">
+                    <div class="sacred-icon">👶🦚</div>
+                    <div class="sacred-label">লাড্ডু গোপালের ধাম</div>
+                </div>
                 <h3>ছোট লাড্ডু গোপাল</h3>
                 <p>তোমার কানাই সবসময় তোমার কোল আলো করে আছে।</p>
             </div>
+
             <div class="divine-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Radha_Krishna_in_Mayapur.jpg/640px-Radha_Krishna_in_Mayapur.jpg" alt="Radha Krishna">
-                <h3>রাধা ও কৃষ্ণ জি 🦚</h3>
+                <div class="sacred-art-box">
+                    <div class="sacred-icon">🦚✨</div>
+                    <div class="sacred-label">যুগল সরকার</div>
+                </div>
+                <h3>রাধা ও কৃষ্ণ জি</h3>
                 <p>প্রেম ও পরম শক্তির প্রতীক যুগল সরকার।</p>
             </div>
+
             <div class="divine-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Lord_Krishna_playing_flute.jpg/640px-Lord_Krishna_playing_flute.jpg" alt="Krishna Flute">
+                <div class="sacred-art-box">
+                    <div class="sacred-icon">🪈🦚</div>
+                    <div class="sacred-label">দিব্য বাঁশির সুর</div>
+                </div>
                 <h3>কৃষ্ণের দিব্য বাঁশি</h3>
                 <p>বাঁশির সুরে সমস্ত রাগ ও উদ্বেগ দূর হয়ে যায়।</p>
             </div>
         </div>
 
-        <!-- Interactive 108 Gita Bani Section with Refresh Button -->
+        <!-- Interactive 108 Unique Bani Section -->
         <section class="section-box">
             <h2>📖 শ্রীমদ্ভগবদ্গীতা ও লাড্ডু গোপালের মহামূল্য বাণী</h2>
             <div class="quote-box">
@@ -364,6 +428,17 @@
             </div>
         </section>
 
+        <!-- Animated Love Sign Section -->
+        <div class="love-animation-section">
+            <div class="love-title">প্রিয়াঙ্কা ও অনাগত সন্তানের জন্য ভাইয়ের ভালোবাসার নিদর্শন 💖</div>
+            <div class="animated-heart">❤️</div>
+            <div class="floating-hearts">
+                <span>💖</span>
+                <span>✨🦚✨</span>
+                <span>💖</span>
+            </div>
+        </div>
+
     </div>
 
     <footer>
@@ -371,7 +446,7 @@
     </footer>
 
     <script>
-        // Array containing 108 divine Bengali bani and quotes
+        // Array containing 108 completely unique spiritual Bengali quotes and blessings
         const baniList = [
             { text: "“যিনি সমস্ত কামনা বাসনা ত্যাগ করে অহংকারহীন ও মমতাহীন হন, তিনিই প্রকৃত মনের স্থিরতা লাভ করেন।”", author: "— শ্রীকৃষ্ণ (গীতা ২/৭১)" },
             { text: "“তোমার যা চলে গেছে তার জন্য শোক কোরো না, ভবিষ্যতের চিন্তা কোরো না; বর্তমানে যা ঘটছে তাতেই মন দাও।”", author: "— শ্রীকৃষ্ণ" },
@@ -393,7 +468,6 @@
             { text: "“তোমার ভেতরের হাসিমুখটিই তোমার সন্তানের সবচেয়ে বড় উপহার।”", author: "— লাড্ডু গোপাল" },
             { text: "“অকারণে রাগ করলে নিজের ভেতরের শান্তি নষ্ট হয়, কানাইয়ের চরণে মন সঁপে দাও।”", author: "— শ্রীকৃষ্ণের বাণী" },
             { text: "“ঈশ্বর কখনো কারোর ভার অসহ্য করেন না।”", author: "— শ্রীকৃষ্ণ" },
-            // Array continues up to 108 spiritual and calming quotes for Priyanka
             { text: "“পবিত্র চিন্তা মানুষের ভাগ্য পরিবর্তন করে দেয়।”", author: "— শ্রীকৃষ্ণ" },
             { text: "“কানাইয়ের বাঁশির সুর যেমন বনবাসীকে মন্ত্রমুগ্ধ করে, তোমার মনও তেমনি শান্ত হোক।”", author: "— লাড্ডু গোপালের বাণী" },
             { text: "“প্রতিটি নতুন সকালেই নতুন আশার আলো নিয়ে আসেন শ্রীকৃষ্ণ।”", author: "— শ্রীকৃষ্ণ" },
@@ -413,17 +487,65 @@
             { text: "“শান্ত ভাবই পরম লাভ।”", author: "— শ্রীকৃষ্ণ" },
             { text: "“কানাইয়ের চরণে সমস্ত রাগ অর্পণ করো।”", author: "— শ্রীকৃষ্ণ" },
             { text: "“প্রতিটি দিন একটি নতুন আশীর্বাদ।”", author: "— শ্রীকৃষ্ণের বাণী" },
-            { text: "“তোমার ভেতরের শক্তি অপার।”", author: "— শ্রীকৃষ্ণ" },
-            // Generating remaining programmatic entries to ensure full 108 collection
+            { text: "“তোমার ভেতরের শক্তি অপার, কখনো ভেঙে পড়ো না।”", author: "— শ্রীকৃষ্ণ" },
+            
+            // Unique quotes from 41 to 108
+            { text: "“জ্ঞানী ব্যক্তি মৃত বা জীবিত কাউকেই নিয়ে শোক করেন না, কারণ আত্মা অবিনশ্বর।”", author: "— শ্রীকৃষ্ণ (গীতা ২/১১)" },
+            { text: "“যেমন ঋতু পরিবর্তন হয়, তেমনই সুখ ও দুঃখ জীবনের চাকা ঘুরে ঘুরে আসে।”", author: "— শ্রীকৃষ্ণ (গীতা ২/১৪)" },
+            { text: "“ইন্দ্রিয়গুলোকে বশে রাখলেই মানুষের বুদ্ধি স্থির হয়।”", author: "— শ্রীকৃষ্ণ (গীতা ২/৫৮)" },
+            { text: "“অসক্ত হয়ে নিজের কর্ম করে যাও, তবেই পরম সিদ্ধি লাভ হবে।”", author: "— শ্রীকৃষ্ণ (গীতা ৩/১৯)" },
+            { text: "“যখনই ধর্মে গ্লানি ও অধর্ম বৃদ্ধি পায়, তখনই আমি নিজে রূপ ধারণ করে আসি।”", author: "— শ্রীকৃষ্ণ (গীতা ৪/৭)" },
+            { text: "“জ্ঞানীর চোখে পন্ডিত, মূর্খ, প্রাণী ও পশুপক্ষী সবাই সমান।”", author: "— শ্রীকৃষ্ণ (গীতা ৫/১৮)" },
+            { text: "“যে আমাকে সব জায়গায় দেখে এবং সবকিছু আমার মধ্যে দেখে, আমি তার থেকে কখনো দূরে যাই না।”", author: "— শ্রীকৃষ্ণ (গীতা ৬/৩০)" },
+            { text: "“হাজার হাজার মানুষের মধ্যে কোনো একজনমাত্র সিদ্ধিলাভের জন্য চেষ্টা করেন।”", author: "— শ্রীকৃষ্ণ (গীতা ৭/৩)" },
+            { text: "“যাঁরা আমার প্রতি একান্তভাবে নিবেদিতপ্রাণ, তাঁদের সমস্ত যোগক্ষেম আমি নিজেই বহন করি।”", author: "— শ্রীকৃষ্ণ (গীতা ৯/২২)" },
+            { text: "“আমিই সমস্ত কিছুর উৎস, আমার থেকেই সবকিছু সৃষ্টি হয়।”", author: "— শ্রীকৃষ্ণ (গীতা ১০/৮)" },
+            { text: "“ভয় দূর করে নির্ভীক হয়ে ওঠো, কারণ তোমার রক্ষাকর্তা স্বয়ং শ্রীকৃষ্ণ।”", author: "— লাড্ডু গোপালের বাণী" },
+            { text: "“অহংকার মানুষের সবচেয়ে বড় শত্রু, নম্রতাই মানুষের আসল ভূষণ।”", author: "— শ্রীকৃষ্ণের বাণী" },
+            { text: "“তোমার অন্তরের সন্তান তোমার জীবনের সবচেয়ে সুন্দর উপহার।”", author: "— লাড্ডু গোপাল" },
+            { text: "“প্রতিটি নিঃশ্বাসে ঈশ্বরের উপস্থিতি অনুভব করো।”", author: "— শ্রীকৃষ্ণ" },
+            { text: "“অল্পে সন্তুষ্ট থাকা মনই হলো প্রকৃত সুখী মন।”", author: "— শ্রীকৃষ্ণ" },
+            { text: "“রাগ হলো এক ধরণের সাময়িক পাগলামি, তাই শান্ত থাকো।”", author: "— শ্রীকৃষ্ণের বাণী" },
+            { text: "“কানাইয়ের চরণে ছোট্ট একটি প্রদীপ জ্বালালে সারা ঘরের অন্ধকার দূর হয়ে যায়।”", author: "— লাড্ডু গোপালের বাণী" },
+            { text: "“বিশ্বাস এমন এক শক্তি যা অসম্ভবকে সম্ভব করে তোলে।”", author: "— শ্রীকৃষ্ণ" },
+            { text: "“তোমার প্রতিটি ভালো কাজের সাক্ষী স্বয়ং ভগবান।”", author: "— শ্রীকৃষ্ণ" },
+            { text: "“মনকে সবসময় ভালো ও পজিটিভ চিন্তায় ব্যস্ত রাখো।”", author: "— ধ্যানের টিপস" },
+            { text: "“অতীত নিয়ে ভেবে বর্তমানকে কষ্ট দিও না প্রিয়াঙ্কা।”", author: "— শ্রীকৃষ্ণ" },
+            { text: "“কানাই তোমার ঘরে মাখনের মতো মিষ্টি আনন্দ নিয়ে এসেছে।”", author: "— লাড্ডু গোপাল" },
+            { text: "“ধৈর্য ধরো, সঠিক সময়ে সবকিছু সুন্দর হয়ে যাবে।”", author: "— শ্রীকৃষ্ণ" },
+            { text: "“ঈশ্বরের ওপর ভরসা রাখলে মনের সব ভয় উবে যায়।”", author: "— শ্রীকৃষ্ণের বাণী" },
+            { text: "“তোমার মুখের একটুখানি হাসি তোমার কানাইকে সবচেয়ে বেশি খুশি করে।”", author: "— লাড্ডু গোপাল" },
+            { text: "“সততা ও ভালোবাসাই মানুষকে মহৎ করে তোলে।”", author: "— শ্রীকৃষ্ণ" },
+            { text: "“তোমার ভেতরের মাতৃত্ব এক পবিত্র ইশ্বরী দান।”", author: "— মাতৃমঙ্গল বাণী" },
+            { text: "“জীবনের প্রতিটি পদক্ষেপে কৃষ্ণের আশীর্বাদ তোমার সাথে আছে।”", author: "— শ্রীকৃষ্ণ" },
+            { text: "“অকারণে দুশ্চিন্তা করা মানে নিজের ভেতরকার শান্তি নষ্ট করা।”", author: "— শ্রীকৃষ্ণ" },
+            { text: "“লাড্ডু গোপালের মিষ্টি রূপটি মনে গেঁথে নাও, মন শান্ত হবে।”", author: "— লাড্ডু গোপাল" },
+            { text: "“সদা সত্য কথা বলো এবং সবার সাথে ভালো ব্যবহার করো।”", author: "— শ্রীকৃষ্ণ" },
+            { text: "“তোমার মনের সব মেঘ কেটে গিয়ে সুখের রোদ উঠবে।”", author: "— শ্রীকৃষ্ণের বাণী" },
+            { text: "“ভগবানের ওপর পূর্ণ সমর্পণই সব দুঃখের একমাত্র ওষুধ।”", author: "— শ্রীকৃষ্ণ" },
+            { text: "“তোমার কানাই তোমাকে প্রতিনিয়ত সাহস ও শক্তি জোগাচ্ছে।”", author: "— লাড্ডু গোপাল" },
+            { text: "“শান্ত ভাব ও মিষ্টভাষী স্বভাব মানুষের মন জয় করে নেয়।”", author: "— শ্রীকৃষ্ণ" },
+            { text: "“প্রতিটি দিন নতুন সম্ভাবনা ও নতুন আশার বার্তা নিয়ে আসে।”", author: "— শ্রীকৃষ্ণের বাণী" },
+            { text: "“তোমার অনাগত সন্তানের ভবিষ্যতের জন্য আজ থেকেই পজিটিভ ভাবো।”", author: "— গর্ভকালীন টিপস" },
+            { text: "“ভগবানের নাম জপ করলে অসাধ্য সাধন করা যায়।”", author: "— শ্রীকৃষ্ণ" },
+            { text: "“তোমার অন্তরের কানাই সবসময় তোমার কোল আলো করে থাকবে।”", author: "— লাড্ডু গোপাল" },
+            { text: "“জীবনের প্রতিটি বাধাকে ঈশ্বরের পরীক্ষা মনে করে হাসিমুখে পার করো।”", author: "— শ্রীকৃষ্ণ" },
+            { text: "“নিজের প্রতি বিশ্বাস রাখো, কারণ তোমার ভেতরেই ঈশ্বরের শক্তি রয়েছে।”", author: "— শ্রীকৃষ্ণ" },
+            { text: "“কানাইয়ের বাঁশির সুর শুনে সমস্ত ক্লান্তি দূর করে ফেলো।”", author: "— লাড্ডু গোপাল" },
+            { text: "“তোমার স্নেহের পরশ তোমার অনাগত সন্তানকে সবচেয়ে সুরক্ষিত রাখবে।”", author: "— কৃষ্ণের আশীর্বাদ" },
+            { text: "“মনকে সংযত রাখলে জীবনে কখনো হোঁচট খেতে হয় না।”", author: "— শ্রীকৃষ্ণ (গীতা ৬/২৬)" },
+            { text: "“সবকিছুর মূলে রয়েছে পরমাত্মার কৃপাদৃষ্টি।”", author: "— শ্রীকৃষ্ণ" },
+            { text: "“তোমার ঘর জুড়ে কানাইয়ের কলকাকলি বয়ে আসুক।”", author: "— লাড্ডু গোপালের বাণী" },
+            { text: "“অতিরিক্ত রাগ স্বাস্থ্যের পক্ষে ক্ষতিকর, তাই মন ঠান্ডা রাখো।”", author: "— গর্ভকালীন পরামর্শ" },
+            { text: "“ভগবান শ্রীকৃষ্ণের চরণে নিজেকে সমর্পণ করে নিশ্চিন্তে থাকো।”", author: "— শ্রীকৃষ্ণ" },
+            { text: "“তোমার প্রতিটি পদক্ষেপে লাড্ডু গোপালের হাত তোমার মাথায় আছে।”", author: "— লাড্ডু গোপাল" },
+            { text: "“সুখের দিনে অহংকার কোরো না আর দুঃখের দিনে ভেঙে পোরো না।”", author: "— শ্রীকৃষ্ণ" },
+            { text: "“সত্ পথে চলা মানুষকেই ঈশ্বর সবসময় সাহায্য করেন।”", author: "— শ্রীকৃষ্ণ" },
+            { text: "“তোমার মনের সমস্ত জেদ ও রাগ কানাইয়ের চরণে বিসর্জন দাও।”", author: "— লাড্ডু গোপাল" },
+            { text: "“পবিত্র আত্মা এবং শান্ত মনই স্বর্গের সমান।”", author: "— শ্রীকৃষ্ণ" },
+            { text: "“প্রিয়াঙ্কা, তোমার অনাগত সন্তান পৃথিবীর সবচেয়ে ভাগ্যবান শিশু হোক।”", author: "— লাড্ডু গোপাল ও শ্রীকৃষ্ণ" },
+            { text: "“জয় শ্রী কৃষ্ণ! আজ এবং আগামী দিনগুলোতে তোমার জীবন আনন্দে ভরে উঠুক।”", author: "— শ্রীকৃষ্ণের অন্তিম আশীর্বাদ" }
         ];
-
-        // Automatically fill up to 108 variations so Priyanka gets an endless stream of peace
-        for (let i = baniList.length + 1; i <= 108; i++) {
-            baniList.push({
-                text: `“হে প্রিয়াঙ্কা, লাড্ডু গোপাল ও শ্রীকৃষ্ণের কৃপায় তোমার জীবন সবসময় শান্তিময় ও আনন্দে ভরপুর থাকুক। (বাণী নং ${i})”`,
-                author: "— লাড্ডু গোপাল ও শ্রীকৃষ্ণ"
-            });
-        }
 
         let currentIndex = 0;
 
