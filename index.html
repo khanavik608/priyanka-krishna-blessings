@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>প্রিয়াঙ্কার পবিত্র মন ও আনন্দ কোল - শ্রীকৃষ্ণ ও লাড্ডু গোপালের কৃপা</title>
-    <!-- Google Fonts for Bengali and English -->
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #d97706; /* Warm Saffron */
+            --primary-color: #d97706; 
             --secondary-color: #b45309;
             --bg-gradient: linear-gradient(135deg, #fef3c7 0%, #fed7aa 50%, #fef3c7 100%);
-            --card-bg: rgba(255, 255, 255, 0.85);
+            --card-bg: rgba(255, 255, 255, 0.9);
             --text-color: #1f2937;
         }
 
@@ -33,19 +33,39 @@
         header {
             text-align: center;
             padding: 40px 20px;
-            background: rgba(255, 255, 255, 0.6);
+            background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(10px);
             border-bottom: 2px solid #fde68a;
+            position: relative;
+        }
+
+        .music-control {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: background 0.2s;
+        }
+
+        .music-control:hover {
+            background: var(--secondary-color);
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             color: var(--secondary-color);
             margin-bottom: 10px;
         }
 
         header p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: #4b5563;
         }
 
@@ -55,7 +75,7 @@
             padding: 20px;
         }
 
-        /* Divine Gallery Section */
+        /* Divine Gallery Section (Multiple Pictures) */
         .divine-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -92,6 +112,11 @@
             margin-bottom: 5px;
         }
 
+        .divine-card p {
+            color: #4b5563;
+            font-size: 0.95rem;
+        }
+
         /* Content Sections */
         .section-box {
             background: var(--card-bg);
@@ -111,18 +136,32 @@
             gap: 10px;
         }
 
-        /* Gita Bani & Quotes Carousel/List */
+        /* Random Gita Bani Box */
         .quote-box {
             background: #fffbeb;
-            padding: 20px;
+            padding: 25px;
             border-radius: 12px;
-            margin-bottom: 15px;
+            text-align: center;
             border: 1px dashed #f59e0b;
-            font-size: 1.15rem;
+            font-size: 1.25rem;
             color: #78350f;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.1);
         }
 
-        /* Meditation & Pregnancy Peace Section */
+        .quote-author {
+            margin-top: 15px;
+            font-size: 1.05rem;
+            color: #b45309;
+            font-weight: bold;
+        }
+
+        .refresh-hint {
+            margin-top: 12px;
+            font-size: 0.9rem;
+            color: #9ca3af;
+        }
+
+        /* Pregnancy Calm & Meditation Section */
         .tip-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -156,7 +195,7 @@
             background: rgba(255, 255, 255, 0.4);
         }
 
-        /* Popup Modal for Special Blessing */
+        /* Popup Modal */
         .modal {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -175,7 +214,6 @@
             max-width: 450px;
             text-align: center;
             box-shadow: 0 20px 25px rgba(0,0,0,0.2);
-            position: relative;
         }
 
         .modal-content h3 {
@@ -212,53 +250,70 @@
 </head>
 <body>
 
-    <!-- Welcome Blessing Modal for Priyanka -->
+    <!-- Background Audio -->
+    <audio id="fluteAudio" loop>
+        <source src="https://cdn.pixabay.com/download/audio/2022/05/16/audio_db32c918ee.mp3?filename=flute-meditation-110956.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Welcome Modal -->
     <div class="modal" id="welcomeModal">
         <div class="modal-content">
             <h3>🌸 শ্রী কৃষ্ণ ও লাড্ডু গোপালের আশীর্বাদ 🌸</h3>
-            <p>প্রিয়াঙ্কা, তোমার এবং তোমার অনাগত সন্তানের মঙ্গল কামনায় এই পেজটি তৈরি করা হয়েছে। মন হালকা রাখো, কৃষ্ণ সবসময় তোমার সাথে আছেন। 🙏</p>
-            <button class="modal-btn" onclick="closeModal()">আশীর্বাদ নিন</button>
+            <p>প্রিয়াঙ্কা, তোমার এবং তোমার অনাগত সন্তানের মঙ্গল কামনায় এই পেজটি তৈরি করা হয়েছে। মন শান্ত রাখো, কৃষ্ণ সবসময় তোমার সাথে আছেন। 🙏</p>
+            <button class="modal-btn" onclick="startExperience()">আশীর্বাদ নিন ও বাঁশির সুর শুনুন</button>
         </div>
     </div>
 
     <header>
+        <button class="music-control" id="musicToggleBtn" onclick="toggleMusic()">🎶 বাঁশির সুর বন্ধ</button>
         <h1>ॐ শ্রী কৃষ্ণপক্ষে প্রিয়াঙ্কার পবিত্র মন ও কোল 🦚</h1>
         <p>“মন হালকা করো প্রিয়াঙ্কা, লাড্ডু গোপাল ও শ্রীকৃষ্ণের চরণে সঁপে দাও সব দুশ্চিন্তা।”</p>
     </header>
 
     <div class="container">
 
-        <!-- Divine Images Section -->
+        <!-- Divine Gallery Section (Multiple Pictures) -->
         <section class="divine-gallery">
             <div class="divine-card">
                 <img src="https://images.unsplash.com/photo-1609137144813-7e94514787ee?auto=format&fit=crop&w=600&q=80" alt="Laddu Gopal">
-                <h3>লাড্ডু গোপাল</h3>
+                <h3>ছোট লাড্ডু গোপাল</h3>
                 <p>তোমার কানাই সবসময় তোমার কোল আলো করে আছে।</p>
             </div>
             <div class="divine-card">
                 <img src="https://images.unsplash.com/photo-1590073844006-33379778ae09?auto=format&fit=crop&w=600&q=80" alt="Radha Krishna">
-                <h3>Radha & Krishna Ji 🦚</h3>
+                <h3>রাধা ও কৃষ্ণ জি 🦚</h3>
                 <p>প্রেম ও পরম শক্তির প্রতীক যুগল সরকার।</p>
             </div>
             <div class="divine-card">
                 <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80" alt="Krishna Flute">
-                <h3>শ্রী কৃষ্ণের বাঁশির সুর</h3>
+                <h3>কৃষ্ণের দিব্য বাঁশি</h3>
                 <p>বাঁশির সুরে সমস্ত রাগ ও উদ্বেগ দূর হয়ে যায়।</p>
+            </div>
+            <div class="divine-card">
+                <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80" alt="Divine Glow">
+                <h3>শ্রী কৃষ্ণের কৃপাদৃষ্টি</h3>
+                <p>তিনি ভক্তের চোখের জল মুছে মুখে হাসি ফোটান।</p>
+            </div>
+            <div class="divine-card">
+                <img src="https://images.unsplash.com/photo-1621252171229-87c8021b3691?auto=format&fit=crop&w=600&q=80" alt="Peaceful Temple">
+                <h3>শান্তিময় ধাম</h3>
+                <p>এখানে এলে মনের সমস্ত ক্লান্তি নিমেষেই দূর হয়।</p>
+            </div>
+            <div class="divine-card">
+                <img src="https://images.unsplash.com/photo-1606293926249-b0c47428e392?auto=format&fit=crop&w=600&q=80" alt="Divine Lotus">
+                <h3>পবিত্র পদ্মফুল</h3>
+                <p>পদ্মফুলের মতো তোমার মনও সর্বদা পবিত্র থাকুক।</p>
             </div>
         </section>
 
-        <!-- Gita's Bani & Quotes in Bengali -->
+        <!-- Gita's Bani & Quotes (Refresh to change) -->
         <section class="section-box">
             <h2>📖 শ্রীমদ্ভগবদ্গীতা ও কৃষ্ণের অমূল্য বাণী</h2>
             <div class="quote-box">
-                "যিনি সমস্ত কামনা বাসনা ত্যাগ করে অহংকারহীন ও মমতাহীন হন, তিনিই প্রকৃত মনের স্থিরতা লাভ করেন।" — <strong>শ্রীকৃষ্ণ (গীতা ২/৭১)</strong>
+                <span id="quoteText">"যিনি সমস্ত কামনা বাসনা ত্যাগ করে অহংকারহীন ও মমতাহীন হন, তিনিই প্রকৃত মনের স্থিরতা লাভ করেন।"</span>
+                <div class="quote-author" id="quoteAuthor">— শ্রীকৃষ্ণ (গীতা ২/৭১)</div>
             </div>
-            <div class="quote-box">
-                "তোমার যা চলে গেছে তার জন্য শোক কোরো না, ভবিষ্যতের চিন্তা কোরো না; বর্তমানে যা ঘটছে তাতেই মন দাও।" — <strong>শ্রীকৃষ্ণ</strong>
-            </div>
-            <div class="quote-box">
-                "হে প্রিয়াঙ্কা, নিজের কর্ত্তব্য করে যাও, ফল আমার ওপর ছেড়ে দাও। আমি তোমার সমস্ত ভার বহন করব।" — <strong>লাড্ডু গোপালের বাণী</strong>
-            </div>
+            <p class="refresh-hint" style="text-align: center; margin-top: 15px;">💡 পেজটি রিফ্রেশ (Refresh) করলেই নতুন নতুন বাণী দেখতে পাবে!</p>
         </section>
 
         <!-- Pregnancy Calm & Meditation Section -->
@@ -289,9 +344,65 @@
     </footer>
 
     <script>
-        // Close welcome modal function
-        function closeModal() {
+        // Array of multiple quotes in Bengali that changes on every refresh
+        const quotes = [
+            {
+                text: "“যিনি সমস্ত কামনা বাসনা ত্যাগ করে অহংকারহীন ও মমতাহীন হন, তিনিই প্রকৃত মনের স্থিরতা লাভ করেন।”",
+                author: "— শ্রীকৃষ্ণ (গীতা ২/৭১)"
+            },
+            {
+                text: "“তোমার যা চলে গেছে তার জন্য শোক কোরো না, ভবিষ্যতের চিন্তা কোরো না; বর্তমানে যা ঘটছে তাতেই মন দাও।”",
+                author: "— শ্রীকৃষ্ণ"
+            },
+            {
+                text: "“হে প্রিয়াঙ্কা, নিজের কর্ত্তব্য করে যাও, ফল আমার ওপর ছেড়ে দাও। আমি তোমার সমস্ত ভার বহন করব।”",
+                author: "— লাড্ডু গোপালের বাণী"
+            },
+            {
+                text: "“মন অত্যন্ত চঞ্চল, কিন্তু নিয়মিত অভ্যাস ও ধ্যানের মাধ্যমে একে শান্ত করা সম্ভব।”",
+                author: "— শ্রীকৃষ্ণ (গীতা ৬/৩৫)"
+            },
+            {
+                text: "“যে ব্যক্তি সব প্রাণীর প্রতি বন্ধুভাবাপন্ন এবং মায়াহীন, সেই ভক্তই আমার সবচেয়ে প্রিয়।”",
+                author: "— শ্রীকৃষ্ণ (গীতা ১২/১৩)"
+            },
+            {
+                text: "“কখনো নিরাশ হয়ো না প্রিয়াঙ্কা, তোমার অন্দরের কানাই সবসময় তোমাকে শক্তি জোগাচ্ছে।”",
+                author: "— লাড্ডু গোপালের আশীর্বাদ"
+            }
+        ];
+
+        // Randomly pick a quote on page load/refresh
+        window.onload = function() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById('quoteText').textContent = quotes[randomIndex].text;
+            document.getElementById('quoteAuthor').textContent = quotes[randomIndex].author;
+        };
+
+        const audio = document.getElementById('fluteAudio');
+        const musicBtn = document.getElementById('musicToggleBtn');
+        let isPlaying = false;
+
+        function startExperience() {
             document.getElementById('welcomeModal').style.display = 'none';
+            audio.play().then(() => {
+                isPlaying = true;
+                musicBtn.textContent = "🎶 বাঁশির সুর বন্ধ";
+            }).catch(error => {
+                console.log("Audio play blocked:", error);
+            });
+        }
+
+        function toggleMusic() {
+            if (isPlaying) {
+                audio.pause();
+                isPlaying = false;
+                musicBtn.textContent = "🎶 বাঁশির সুর চালু করুন";
+            } else {
+                audio.play();
+                isPlaying = true;
+                musicBtn.textContent = "🎶 বাঁশির সুর বন্ধ";
+            }
         }
     </script>
 </body>
