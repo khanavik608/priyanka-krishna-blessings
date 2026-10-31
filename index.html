@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>প্রিয়াঙ্কার পবিত্র মন ও আনন্দ কোল - শ্রীকৃষ্ণ ও লাড্ডু গোপালের কৃপা</title>
+    <!-- Google Fonts for Bengali and English -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #d97706; /* Warm Saffron */
+            --secondary-color: #b45309;
+            --bg-gradient: linear-gradient(135deg, #fef3c7 0%, #fed7aa 50%, #fef3c7 100%);
+            --card-bg: rgba(255, 255, 255, 0.85);
+            --text-color: #1f2937;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Hind Siliguri', sans-serif;
+        }
+
+        body {
+            background: var(--bg-gradient);
+            color: var(--text-color);
+            min-height: 100vh;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid #fde68a;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #4b5563;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Divine Gallery Section */
+        .divine-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .divine-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(217, 119, 6, 0.15);
+            transition: transform 0.3s ease;
+            border: 1px solid #fde68a;
+        }
+
+        .divine-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .divine-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .divine-card h3 {
+            color: var(--secondary-color);
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        /* Content Sections */
+        .section-box {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border-left: 6px solid var(--primary-color);
+        }
+
+        .section-box h2 {
+            color: var(--secondary-color);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Gita Bani & Quotes Carousel/List */
+        .quote-box {
+            background: #fffbeb;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border: 1px dashed #f59e0b;
+            font-size: 1.15rem;
+            color: #78350f;
+        }
+
+        /* Meditation & Pregnancy Peace Section */
+        .tip-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .tip-card {
+            background: #f0fdf4;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #bbf7d0;
+        }
+
+        .tip-card h4 {
+            color: #166534;
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+
+        .tip-card p {
+            color: #15803d;
+            font-size: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #6b7280;
+            font-size: 0.95rem;
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        /* Popup Modal for Special Blessing */
+        .modal {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .modal-content {
+            background: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            max-width: 450px;
+            text-align: center;
+            box-shadow: 0 20px 25px rgba(0,0,0,0.2);
+            position: relative;
+        }
+
+        .modal-content h3 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .modal-content p {
+            margin-bottom: 20px;
+            color: #4b5563;
+        }
+
+        .modal-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            font-size: 1rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .modal-btn:hover {
+            background: var(--secondary-color);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Welcome Blessing Modal for Priyanka -->
+    <div class="modal" id="welcomeModal">
+        <div class="modal-content">
+            <h3>🌸 শ্রী কৃষ্ণ ও লাড্ডু গোপালের আশীর্বাদ 🌸</h3>
+            <p>প্রিয়াঙ্কা, তোমার এবং তোমার অনাগত সন্তানের মঙ্গল কামনায় এই পেজটি তৈরি করা হয়েছে। মন হালকা রাখো, কৃষ্ণ সবসময় তোমার সাথে আছেন। 🙏</p>
+            <button class="modal-btn" onclick="closeModal()">আশীর্বাদ নিন</button>
+        </div>
+    </div>
+
+    <header>
+        <h1>ॐ শ্রী কৃষ্ণপক্ষে প্রিয়াঙ্কার পবিত্র মন ও কোল 🦚</h1>
+        <p>“মন হালকা করো প্রিয়াঙ্কা, লাড্ডু গোপাল ও শ্রীকৃষ্ণের চরণে সঁপে দাও সব দুশ্চিন্তা।”</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Divine Images Section -->
+        <section class="divine-gallery">
+            <div class="divine-card">
+                <img src="https://images.unsplash.com/photo-1609137144813-7e94514787ee?auto=format&fit=crop&w=600&q=80" alt="Laddu Gopal">
+                <h3>লাড্ডু গোপাল</h3>
+                <p>তোমার কানাই সবসময় তোমার কোল আলো করে আছে।</p>
+            </div>
+            <div class="divine-card">
+                <img src="https://images.unsplash.com/photo-1590073844006-33379778ae09?auto=format&fit=crop&w=600&q=80" alt="Radha Krishna">
+                <h3>Radha & Krishna Ji 🦚</h3>
+                <p>প্রেম ও পরম শক্তির প্রতীক যুগল সরকার।</p>
+            </div>
+            <div class="divine-card">
+                <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80" alt="Krishna Flute">
+                <h3>শ্রী কৃষ্ণের বাঁশির সুর</h3>
+                <p>বাঁশির সুরে সমস্ত রাগ ও উদ্বেগ দূর হয়ে যায়।</p>
+            </div>
+        </section>
+
+        <!-- Gita's Bani & Quotes in Bengali -->
+        <section class="section-box">
+            <h2>📖 শ্রীমদ্ভগবদ্গীতা ও কৃষ্ণের অমূল্য বাণী</h2>
+            <div class="quote-box">
+                "যিনি সমস্ত কামনা বাসনা ত্যাগ করে অহংকারহীন ও মমতাহীন হন, তিনিই প্রকৃত মনের স্থিরতা লাভ করেন।" — <strong>শ্রীকৃষ্ণ (গীতা ২/৭১)</strong>
+            </div>
+            <div class="quote-box">
+                "তোমার যা চলে গেছে তার জন্য শোক কোরো না, ভবিষ্যতের চিন্তা কোরো না; বর্তমানে যা ঘটছে তাতেই মন দাও।" — <strong>শ্রীকৃষ্ণ</strong>
+            </div>
+            <div class="quote-box">
+                "হে প্রিয়াঙ্কা, নিজের কর্ত্তব্য করে যাও, ফল আমার ওপর ছেড়ে দাও। আমি তোমার সমস্ত ভার বহন করব।" — <strong>লাড্ডু গোপালের বাণী</strong>
+            </div>
+        </section>
+
+        <!-- Pregnancy Calm & Meditation Section -->
+        <section class="section-box" style="border-left-color: #10b981;">
+            <h2 style="color: #047857;">🧘‍♀️ প্রিয়াঙ্কার জন্য গর্ভকালীন মানসিক শক্তি ও মন শান্ত করার টিপস</h2>
+            <p style="margin-bottom: 15px; color: #374151;">গর্ভাবস্থায় রাগ বা অতিরিক্ত দুশ্চিন্তা কমানোর জন্য এই ছোট্ট অভ্যাসগুলো প্রতিদিন মেনে চলো:</p>
+            
+            <div class="tip-grid">
+                <div class="tip-card">
+                    <h4>১. গভীর শ্বাসপ্রশ্বাস (Deep Breathing)</h4>
+                    <p>যখনই রাগ বা স্ট্রেস লাগবে, চোখ বন্ধ করে লম্বা লম্বা ৩টি শ্বাস নাও এবং ছাড়ো। মনে মনে বলো—"কৃষ্ণ আমার সাথে আছেন।"</p>
+                </div>
+                <div class="tip-card">
+                    <h4>২. নাম জপ ও মিষ্টি সংগীত</h4>
+                    <p>প্রতিদিন সকালে লাড্ডু গোপালের সামনে কিছুক্ষণ বসে "हरे कृष्ण हरे राम" বা হালকা বাঁশির সুর শোনো। এতে শরীর ও মন অত্যন্ত ঝরঝরে থাকে।</p>
+                </div>
+                <div class="tip-card">
+                    <h4>৩. ইতিবাচক ভাবনা</h4>
+                    <p>মনে রেখো, তুমি একটি নতুন জীবনকে পৃথিবীর আলো দেখাচ্ছ। তোমার ভেতরের আনন্দ সরাসরি তোমার সন্তানের মধ্যে প্রবেশ করে। তাই সবসময় হাসিখুশি থাকার চেষ্টা করো।</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>সোহাগের ভাইয়ের পক্ষ থেকে প্রিয়াঙ্কা ও অনাগত সন্তানের জন্য উৎসর্গীকৃত 💖 | জয় শ্রী কৃষ্ণ 🙏</p>
+    </footer>
+
+    <script>
+        // Close welcome modal function
+        function closeModal() {
+            document.getElementById('welcomeModal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
